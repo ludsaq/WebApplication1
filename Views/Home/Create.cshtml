@@ -1,0 +1,28 @@
+﻿@model WebApplication1.Models.User
+@{
+    ViewBag.Title = "Добавление пользователя";
+}
+<form asp-action="create" asp-controller="home">
+    <div class="form-group">
+        <label asp-for="login" class="control-label">Логин</label>
+        <input type="text" asp-for="login" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="referens" class="control-label">Контактная Информация</label>
+        <input type="text" asp-for="referens" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label asp-for="description" class="control-label">О себе</label>
+        <input type="text" asp-for="description" class="form-control" />
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Отправить" class="btn btn-default" />
+    </div>
+</form>
+
+@section scripts{
+
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+}
+
